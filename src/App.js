@@ -14,6 +14,16 @@ import {
 
 
 class App extends Component {
+
+  componentDidMount() {
+    let productInfoAccess = new Products();
+
+    let productInfo = productInfoAccess.dataArray; 
+
+    console.log(productInfo);
+    
+  }
+
   render() {
     return (
       <div className = "App">
