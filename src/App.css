@@ -36,27 +36,3 @@
     transform: rotate(360deg);
   }
 }
-.App{
-  background: url(https://techmalak.com/wp-content/uploads/2019/02/building-gaming-pc.jpg) no-repeat 
-  center center fixed; 
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover;
-}
-
-.products{
-  background: url(https://cdn.staticneo.com/a/how-to-build-a-stellar-gaming-pc/main.jpg) no-repeat 
-  center center fixed; 
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover;
-}
-
-.nav{
-  box-sizing: border-box;
-  margin:0;
-  border:0;
-  background-color: #244252A;
-}
