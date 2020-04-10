@@ -6,7 +6,6 @@ export default class ProductDetail extends Component {
         super();
       
       }
-    
 
     render() {
 
@@ -18,8 +17,7 @@ export default class ProductDetail extends Component {
 
                 <a href = "/Store">Back to all items</a>
 
-
-                
+             
             </div>
         )
     }

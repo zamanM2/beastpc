@@ -18,8 +18,12 @@ import {
 
 class App extends Component {
 
+
   constructor() {
+
     super();
+    let productInfoAccess;
+    this.productInfoAccess = null;
     this.state = {
       productData: [],
     
@@ -28,9 +32,9 @@ class App extends Component {
   }
 
   componentDidMount() {
-    let productInfoAccess = new Products();
+     this.productInfoAccess = new Products();
 
-    let productInfo = productInfoAccess.dataArray; 
+    let productInfo = this.productInfoAccess.dataArray; 
 
     console.log(productInfo);
 
@@ -60,7 +64,9 @@ class App extends Component {
 
         <Link to="/Reviews">Reviews</Link>
 
-        <Link to="/UsersList">Users List</Link>
+        <Link to="/UsersList"> Admin Users List</Link>
+      
+        <Link to="/AdminAddProductManager">Admin Product Manager</Link>
       
       
     </ul>
@@ -82,6 +88,57 @@ class App extends Component {
     </Route>
     <Route path="/UsersList">
       <UsersList />
+    </Route>
+    <Route path="/AdminAddProductManager">
+      <div>
+      <h2>Product List</h2>
+     {
+      // console.log(this.state.productData)
+       this.state.productData.map(product => {
+          return <div > 
+              {product.name} | {product.id} | <button>delete</button>
+                </div>
+           
+        })
+        
+      } 
+
+        <div>
+        <br/><br/>
+        <h2>Add Product Or Enter a existing ID to Update</h2>
+        <form onSubmit={this.handleSubmit}>
+                    <label>
+                        Name:
+                        <input type="text" value={this.state.value} onChange={this.handleChange} />   
+                    </label>
+                    <br/><br/>
+                    <label>
+                        Image URL:
+                        <input type="text" value={this.state.value} onChange={this.handleChange} />   
+                    </label>
+                          <br/><br/>
+                    <label>
+                        Price:
+                        <input type="text" value={this.state.value} onChange={this.handleChange} />   
+                    </label>
+                    <br/><br/>
+                    <label>
+                    Description:
+                        <input type="text" value={this.state.value} onChange={this.handleChange} />   
+                    </label>
+                    <br/><br/>
+                    <label>
+                    ID:
+                        <input type="text" value={this.state.value} onChange={this.handleChange} />   
+                    </label>
+                    <br/><br/>
+
+                    <input type="Submit" value="Search" />
+                </form>
+                 
+        </div>
+
+      </div>
     </Route>
     <Route exact path="/">
       <Home />
