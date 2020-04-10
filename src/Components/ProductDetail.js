@@ -16,7 +16,7 @@ export default class ProductDetail extends Component {
                 {this.props.value.description}
                 <br/>
 
-                <a href = "/Store">Back to store</a>
+                <a href = "/Store">Back to all items</a>
 
 
                 
