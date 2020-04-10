@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Home from './Components/Home';
 import Cart from './Components/Cart';
-import Products from './Components/Products';
+import Products from './Components/ProductInfo';
 import Reviews from './Components/Reviews';
 import Store from './Components/Store'
 
