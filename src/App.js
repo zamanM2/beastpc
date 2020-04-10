@@ -17,10 +17,8 @@ class App extends Component {
   render() {
     return (
       <div className = "App">
-        Hello World
       
-
-
+      
 <Router>
 <div className = "nav">
   <nav>
@@ -29,13 +27,13 @@ class App extends Component {
         <Link to="/">Home</Link>
       
      
-        <Link to="/Store">Store</Link>
+        <Link to="/Products">Products</Link>
      
         <Link to="/Cart">Cart</Link>
 
         <Link to="/Reviews">Reviews</Link>
       
-      
+       
     </ul>
   </nav>
 
