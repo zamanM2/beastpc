@@ -4,8 +4,7 @@ import Home from './Components/Home';
 import Cart from './Components/Cart';
 import Products from './Components/ProductInfo';
 import Reviews from './Components/Reviews';
-import Store from './Components/Store'
-import ProductDetail from './Components/ProductDetail'
+import Store from './Components/Store';
 
 import {
   BrowserRouter as Router,
@@ -17,8 +16,6 @@ import {
 
 
 class App extends Component {
-
-   
 
   constructor() {
     super();
@@ -81,9 +78,7 @@ class App extends Component {
     <Route path="/Reviews">
       <Reviews />
     </Route>
-    <Route path="/ProductDetail">
-      <ProductDetail />
-    </Route>
+ 
     <Route exact path="/">
       <Home />
     </Route>

@@ -1,34 +1,48 @@
 import React, { Component } from 'react'
-import {Redirect} from 'react-router-dom';
+import ProductDetail from './ProductDetail'
 
-
-function theFunction() {
-    console.log("helloworld");
-}
 
 export default class Store extends Component {
     state = {
-        toProductdetail: false
+        toProductdetail: false,
+        clickedItem : {}
       }
 
 
-    handleClick = () => {
+    handleClick = (item) => {
+        console.log(item);
         this.setState({
-            toProductdetail: true
+            toProductdetail: true,
+            clickedItem: item
         });
     }
-
 
     render() {
 
         if (this.state.toProductdetail === true) {
-            return <Redirect to='/ProductDetail' />
+            return(
+            <div>
+            <ProductDetail value = {this.state.clickedItem}/>
+            </div>
+            )
+
           }
 
         console.log(this.props.value);
+
+        if(this.props.value.length > 0)
         return (
             <div>
-                <a href="#" onClick={this.handleClick}>Item</a>
+                {this.props.value[0].name}
+                <br/>
+                <button onClick={()=>this.handleClick(this.props.value[0])}>View Item </button>
+            </div>
+        )
+
+        return (
+            <div>
+            
+               
             </div>
         )
     }
