@@ -5,6 +5,7 @@ import Cart from './Components/Cart';
 import Products from './Components/ProductInfo';
 import Reviews from './Components/Reviews';
 import Store from './Components/Store'
+import ProductDetail from './Components/ProductDetail'
 
 import {
   BrowserRouter as Router,
@@ -79,6 +80,9 @@ class App extends Component {
     </Route>
     <Route path="/Reviews">
       <Reviews />
+    </Route>
+    <Route path="/ProductDetail">
+      <ProductDetail />
     </Route>
     <Route exact path="/">
       <Home />
