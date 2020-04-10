@@ -7,7 +7,6 @@ export default class Products extends Component {
     constructor() {
         super();
 
-        let test;
 
      let dataArray;   
      let item1 = {name: "Gamer Essential Esports",

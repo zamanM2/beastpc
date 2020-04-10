@@ -4,6 +4,8 @@ import Home from './Components/Home';
 import Cart from './Components/Cart';
 import Products from './Components/Products';
 import Reviews from './Components/Reviews';
+import Store from './Components/Store'
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -15,12 +17,27 @@ import {
 
 class App extends Component {
 
+   
+
+  constructor() {
+    super();
+    this.state = {
+      productData: [],
+    
+    };
+
+  }
+
   componentDidMount() {
     let productInfoAccess = new Products();
 
     let productInfo = productInfoAccess.dataArray; 
 
     console.log(productInfo);
+
+    this.setState({
+      productData: productInfo
+    })
     
   }
 
@@ -53,6 +70,9 @@ class App extends Component {
   <Switch>
   <Route path="/Cart">
       <Cart/>
+    </Route>
+    <Route path="/Store">
+      <Store value = {this.state.productData}/>
     </Route>
     <Route path="/Products">
       <Products />
