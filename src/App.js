@@ -5,6 +5,7 @@ import Cart from './Components/Cart';
 import Products from './Components/ProductInfo';
 import Reviews from './Components/Reviews';
 import Store from './Components/Store';
+import UsersList from './Components/UsersList'
 
 import {
   BrowserRouter as Router,
@@ -53,12 +54,13 @@ class App extends Component {
       
         <Link to="/">Home</Link>
       
-     
         <Link to="/Store">Store</Link>
      
         <Link to="/Cart">Cart</Link>
 
         <Link to="/Reviews">Reviews</Link>
+
+        <Link to="/UsersList">Users List</Link>
       
       
     </ul>
@@ -78,7 +80,9 @@ class App extends Component {
     <Route path="/Reviews">
       <Reviews />
     </Route>
- 
+    <Route path="/UsersList">
+      <UsersList />
+    </Route>
     <Route exact path="/">
       <Home />
     </Route>
