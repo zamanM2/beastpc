@@ -48,7 +48,7 @@ class App extends Component {
 <Router>
 <div className = "nav">
   <nav>
-    <ul>
+    <ul className= "link">
       
         <Link to="/">Home</Link>
       
