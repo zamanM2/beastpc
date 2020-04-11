@@ -5,7 +5,8 @@ import Cart from './Components/Cart';
 import Products from './Components/ProductInfo';
 import Reviews from './Components/Reviews';
 import Store from './Components/Store';
-import UsersList from './Components/UsersList'
+import UsersList from './Components/UsersList';
+import Checkout from './Components/Checkout'
 
 import {
   BrowserRouter as Router,
