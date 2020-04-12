@@ -5,14 +5,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-.App{
   background: url(https://techmalak.com/wp-content/uploads/2019/02/building-gaming-pc.jpg) no-repeat 
   center center fixed; 
 -webkit-background-size: cover;
@@ -20,3 +12,50 @@ code {
 -o-background-size: cover;
 background-size: cover;
 }
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+.products{
+  background: url(https://cdn.staticneo.com/a/how-to-build-a-stellar-gaming-pc/main.jpg) no-repeat 
+  center center fixed; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+
+.nav{
+  box-sizing: border-box;
+  margin:0;
+  border:0;
+  background-color: #244252A;
+} 
+
+.link{
+  font-weight: 550;
+  font-size: 15px;
+  color: #edf0f1;
+  text-decoration: none;
+  display:inline-block;
+  padding: 0px 20px;
+  transition: all 0.3s ease 0s;
+}
+
+.link : hover{
+  
+}
+
+header{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+}
+
+
+
+

@@ -5,7 +5,8 @@ import Cart from './Components/Cart';
 import Products from './Components/ProductInfo';
 import Reviews from './Components/Reviews';
 import Store from './Components/Store';
-import UsersList from './Components/UsersList'
+import UsersList from './Components/UsersList';
+import Checkout from './Components/Checkout'
 
 import {
   BrowserRouter as Router,
@@ -139,15 +140,16 @@ class App extends Component {
   render() {
     return (
       <div className = "App">
-        Hello World
       
 <Router>
 <div className = "nav">
   <nav>
-    <ul>
+    <ul className= "link">
       
         <Link to="/">Home</Link>
       
+     
+        <Link to="/Products">Products</Link>
         <Link to="/Store">Store</Link>
      
         <Link to="/Cart">Cart</Link>
