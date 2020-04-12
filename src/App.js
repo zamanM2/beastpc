@@ -29,6 +29,8 @@ class App extends Component {
     
     
     };
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.deleteClicked = this.deleteClicked.bind(this);
 
   }
 
@@ -43,8 +45,23 @@ class App extends Component {
       productData: productInfo
 
     })
-    this.handleSubmit = this.handleSubmit.bind(this);
     
+    
+  }
+
+  deleteClicked(productID) {
+    this.productInfoAccess.deleteProductWithID(productID);
+
+    let productInfo =  this.productInfoAccess.dataArray///this.productInfoAccess.dataArray; 
+
+    console.log(productInfo);
+
+    this.setState({
+      productData: productInfo
+
+    })
+
+
   }
 
   handleSubmit(event){
@@ -116,10 +133,6 @@ class App extends Component {
       productData: productInfo
 
     })
-
-
-
-
      
  }
 
@@ -172,7 +185,7 @@ class App extends Component {
       // console.log(this.state.productData)
        this.state.productData.map(product => {
           return <div > 
-              {product.name} | {product.id} | <button>delete</button>
+              {product.name} | {product.id} | <button onClick={() => this.deleteClicked(product.id)}>delete</button>
                 </div>
            
         })
@@ -185,27 +198,27 @@ class App extends Component {
         <form onSubmit={this.handleSubmit}>
                     <label>
                         Name:
-                        <input id="nameInput" type="text" onChange={this.handleChange} />   
+                        <input id="nameInput" type="text" />   
                     </label>
                     <br/><br/>
                     <label>
                         Image URL:
-                        <input id="imageURLInput" type="text"  onChange={this.handleChange} />   
+                        <input id="imageURLInput" type="text"  />   
                     </label>
                           <br/><br/>
                     <label>
                         Price:
-                        <input id="priceInput" type="text"  onChange={this.handleChange} />   
+                        <input id="priceInput" type="text"  />   
                     </label>
                     <br/><br/>
                     <label>
                     Description:
-                        <input id="descriptionInput" type="text"  onChange={this.handleChange} />   
+                        <input id="descriptionInput" type="text"  />   
                     </label>
                     <br/><br/>
                     <label>
                     ID:
-                        <input id="idInput" type="text"  onChange={this.handleChange} />   
+                        <input id="idInput" type="text"  />   
                     </label>
                     <br/><br/>
 
