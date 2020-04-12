@@ -1,12 +1,42 @@
 import React, { Component } from 'react'
-
+import Cart from './Cart'
   
 
 class Checkout extends Component {
+    constructor() {
+        super();
+
+
+
+                  
+
+      }
+
+      checkOut(){
+        let item1 =  1085;
+     
+        let item2 =  1655;
+                     
+       let item3 =  1649;
+                    
+       let item4 =  99 ; 
+   
+       let item5 = 20;
+                     
+                     
+       let item6 = 73;
+       
+       let total = item1 + item2 + item3 + item4 + item5 + item6;
+
+       return total;
+      }
+
+     
     render() {
+       
         return (
             <div>
-                <h1>Thank You for your purchace!</h1>
+                {/* {console.log(checkOut)} */}
             </div>
         )
     }
