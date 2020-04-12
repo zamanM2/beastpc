@@ -149,16 +149,16 @@ class App extends Component {
         <Link to="/">Home</Link>
       
      
-        <Link to="/Products">Products</Link>
-        <Link to="/Store">Store</Link>
+        <Link to="/Products">Products</Link> |
+        <Link to="/Store">Store</Link> |
      
-        <Link to="/Cart">Cart</Link>
+        <Link to="/Cart">Cart</Link> |
 
-        <Link to="/Reviews">Reviews</Link>
+        <Link to="/Reviews">Reviews</Link> |
 
-        <Link to="/UsersList"> Admin Users List</Link>
+        <Link to="/UsersList"> Admin Users List</Link> |
       
-        <Link to="/AdminAddProductManager">Admin Product Manager</Link>
+        <Link to="/AdminAddProductManager">Admin Product Manager</Link> |
           
     </ul>
   </nav>
