@@ -28,9 +28,9 @@ export default class UsersList extends Component {
 
     render() {
         return (
-            <div>
+            <div className = "user-list">
 
- <div > 
+ <div  > 
      
  <h2>Beast PC Users</h2>
      {

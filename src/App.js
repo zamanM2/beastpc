@@ -139,6 +139,8 @@ class App extends Component {
   render() {
     return (
       <div className = "App">
+
+        
       
 <Router>
 <div className = "nav">
@@ -161,7 +163,9 @@ class App extends Component {
   
   <Switch>
   <Route path="/Cart">
-      <Cart/>
+      <Cart
+     
+      />
     </Route>
     <Route path="/Store">
       <Store value = {this.state.productData}/>

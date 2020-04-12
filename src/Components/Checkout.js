@@ -1,16 +1,12 @@
 import React, { Component } from 'react'
-import Cart from './Cart'
+
   
 
 class Checkout extends Component {
     constructor() {
         super();
 
-
-
-                  
-
-      }
+    }
 
       checkOut(){
         let item1 =  1085;

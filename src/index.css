@@ -18,6 +18,18 @@ code {
     monospace;
 }
 
+.App{
+  background: url(https://img.wallpapersafari.com/desktop/1680/1050/2/56/NGmsB6.jpg) no-repeat 
+  center center fixed; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+color: aliceblue;
+font-size: 20px;
+}
+
+
 
 .products{
   background: url(https://cdn.staticneo.com/a/how-to-build-a-stellar-gaming-pc/main.jpg) no-repeat 
@@ -56,6 +68,35 @@ header{
   padding: 30px 10%;
 }
 
+.user-list{
+background:url(https://cdn.hipwallpaper.com/i/77/93/s1VJlu.jpg)no-repeat 
+center center fixed; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover; 
+
+  color:rgb(0, 128, 96);
+  height: 100px;
+  background-color: #333;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 20px;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.info{
+  
+  background:url(https://img.wallpapersafari.com/desktop/1680/1050/2/56/NGmsB6.jpg)no-repeat 
+center center fixed; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
 
 
 
