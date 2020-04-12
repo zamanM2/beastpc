@@ -15,7 +15,6 @@ import {
 } from "react-router-dom";
 
 
-
 class App extends Component {
 
 
@@ -44,13 +43,68 @@ class App extends Component {
     
   }
 
+  handleSubmit(event){
+     //alert('The form was submitted');
+     event.preventDefault();
+
+    let nameInput = document.getElementById("nameInput").value;
+    nameInput = nameInput.trim();
+
+    if(nameInput === "")
+    {
+      alert('name field is blank');
+      return;
+    }
+    console.log(nameInput.value);
+
+    let imageURLInput = document.getElementById("imageURLInput").value;
+    imageURLInput = imageURLInput.trim();
+
+    if(imageURLInput === "")
+    {
+      alert('Image URL field is blank');
+      return;
+    }
+    console.log(imageURLInput.value);
+
+    let priceInput = document.getElementById("priceInput").value;
+    priceInput = priceInput.trim();
+
+    if(priceInput === "")
+    {
+      alert('name field is blank');
+      return;
+    }
+    console.log(priceInput.value);
+
+
+    let descriptionInput = document.getElementById("descriptionInput").value;
+    descriptionInput = descriptionInput.trim();
+
+    if(descriptionInput === "")
+    {
+      alert('description field is blank');
+      return;
+    }
+    console.log(descriptionInput.value);
+
+    let idInput = document.getElementById("idInput").value;
+    idInput = idInput.trim();
+
+    if(idInput === "")
+    {
+      alert('name field is blank');
+      return;
+    }
+    console.log(idInput.value);
+     
+ }
+
   render() {
     return (
       <div className = "App">
         Hello World
       
-
-
 <Router>
 <div className = "nav">
   <nav>
@@ -67,8 +121,7 @@ class App extends Component {
         <Link to="/UsersList"> Admin Users List</Link>
       
         <Link to="/AdminAddProductManager">Admin Product Manager</Link>
-      
-      
+          
     </ul>
   </nav>
 
@@ -109,31 +162,31 @@ class App extends Component {
         <form onSubmit={this.handleSubmit}>
                     <label>
                         Name:
-                        <input type="text" value={this.state.value} onChange={this.handleChange} />   
+                        <input id="nameInput" type="text" onChange={this.handleChange} />   
                     </label>
                     <br/><br/>
                     <label>
                         Image URL:
-                        <input type="text" value={this.state.value} onChange={this.handleChange} />   
+                        <input id="imageURLInput" type="text"  onChange={this.handleChange} />   
                     </label>
                           <br/><br/>
                     <label>
                         Price:
-                        <input type="text" value={this.state.value} onChange={this.handleChange} />   
+                        <input id="priceInput" type="text"  onChange={this.handleChange} />   
                     </label>
                     <br/><br/>
                     <label>
                     Description:
-                        <input type="text" value={this.state.value} onChange={this.handleChange} />   
+                        <input id="descriptionInput" type="text"  onChange={this.handleChange} />   
                     </label>
                     <br/><br/>
                     <label>
                     ID:
-                        <input type="text" value={this.state.value} onChange={this.handleChange} />   
+                        <input type="idInput"  onChange={this.handleChange} />   
                     </label>
                     <br/><br/>
 
-                    <input type="Submit" value="Search" />
+                    <input type="Submit" value="Submit" />
                 </form>
                  
         </div>
