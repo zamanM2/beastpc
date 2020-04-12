@@ -78,9 +78,10 @@ export default class Products extends Component {
                     price: pPrice, 
                     description: pDescription 
                     ,id:pId};
-                    break;
+                    return true;
               }
           }
+          return false;
 
       }
 

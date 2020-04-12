@@ -18,34 +18,39 @@ import {
 class App extends Component {
 
 
+
   constructor() {
 
     super();
-    let productInfoAccess;
-    this.productInfoAccess = null;
+    
+    this.productInfoAccess = new Products();
     this.state = {
       productData: [],
+    
     
     };
 
   }
 
   componentDidMount() {
-     this.productInfoAccess = new Products();
+ //    this.productInfoAccess = ;
 
-    let productInfo = this.productInfoAccess.dataArray; 
+    let productInfo =  this.productInfoAccess.dataArray///this.productInfoAccess.dataArray; 
 
     console.log(productInfo);
 
     this.setState({
       productData: productInfo
+
     })
+    this.handleSubmit = this.handleSubmit.bind(this);
     
   }
 
   handleSubmit(event){
      //alert('The form was submitted');
      event.preventDefault();
+     
 
     let nameInput = document.getElementById("nameInput").value;
     nameInput = nameInput.trim();
@@ -72,7 +77,7 @@ class App extends Component {
 
     if(priceInput === "")
     {
-      alert('name field is blank');
+      alert('price field is blank');
       return;
     }
     console.log(priceInput.value);
@@ -93,10 +98,28 @@ class App extends Component {
 
     if(idInput === "")
     {
-      alert('name field is blank');
+      alert('id field is blank');
       return;
     }
     console.log(idInput.value);
+
+    if(!this.productInfoAccess.updateProductWithID(idInput,nameInput,priceInput,imageURLInput,descriptionInput))
+    {
+      this.productInfoAccess.createProduct(nameInput,priceInput,imageURLInput,descriptionInput,idInput);
+    }
+
+    let productInfo =  this.productInfoAccess.dataArray///this.productInfoAccess.dataArray; 
+
+    console.log(productInfo);
+
+    this.setState({
+      productData: productInfo
+
+    })
+
+
+
+
      
  }
 
@@ -182,7 +205,7 @@ class App extends Component {
                     <br/><br/>
                     <label>
                     ID:
-                        <input type="idInput"  onChange={this.handleChange} />   
+                        <input id="idInput" type="text"  onChange={this.handleChange} />   
                     </label>
                     <br/><br/>
 
