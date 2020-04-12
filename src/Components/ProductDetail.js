@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import ProductDetail from './ProductDetail'
+import Cart from './Cart'
 
 export default class ProductDetail extends Component {
 
