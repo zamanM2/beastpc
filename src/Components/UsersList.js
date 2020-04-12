@@ -11,7 +11,9 @@ export default class UsersList extends Component {
       }
     
       componentDidMount() {
-        fetch('https://jsonplaceholder.typicode.com/users')
+        const proxyurl = "https://cors-anywhere.herokuapp.com/";
+
+        fetch(proxyurl + 'https://jsonplaceholder.typicode.com/users')
           .then((response) => {
             return response.json();
           })
@@ -38,7 +40,7 @@ export default class UsersList extends Component {
         })
       } </div>
     
-  }
+  
                 
             </div>
         )
