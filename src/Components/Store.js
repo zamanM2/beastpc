@@ -33,9 +33,28 @@ export default class Store extends Component {
         if(this.props.value.length > 0)
         return (
             <div>
-                {this.props.value[0].name}
+                {/* {this.props.value[0].name}
                 <br/>
-                <button onClick={()=>this.handleClick(this.props.value[0])}>View Item </button>
+                <button onClick={()=>this.handleClick(this.props.value[0])}>View Item </button> */}
+
+<h2>Beast PC Users</h2>
+     {
+        this.props.value.map(value => {
+          return <div > 
+              {value.name}
+              <br/> 
+              <img src = {value.imageURL} length="300px" width="300px" />
+              <br/> 
+              Price: {value.price}
+              <br/>  <br/> 
+              {/* Description: {value.description}
+              <br/> */}
+              <button onClick={()=>this.handleClick(value)}>View Item </button>
+              <br/>  <br/> 
+              </div>
+        })
+      }
+
             </div>
         )
 
