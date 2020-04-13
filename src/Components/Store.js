@@ -49,7 +49,7 @@ export default class Store extends Component {
               <br/>  <br/> 
               {/* Description: {value.description}
               <br/> */}
-              <button onClick={()=>this.handleClick(value)}>View Item </button>
+              <button className = "button" onClick={()=>this.handleClick(value)}>View Item </button>
               <br/>  <br/> 
               </div>
         })

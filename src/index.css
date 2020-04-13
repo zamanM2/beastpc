@@ -5,8 +5,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background: url(https://techmalak.com/wp-content/uploads/2019/02/building-gaming-pc.jpg) no-repeat 
-  center center fixed;  */
 -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;
@@ -25,7 +23,7 @@ code {
 -moz-background-size: cover;
 -o-background-size: cover;
 background-size: cover;
-color: aliceblue;
+color: white;
 font-size: 20px;
 font-family: 'Press Start 2P', cursive;
 }
@@ -66,14 +64,14 @@ header{
 }
 
 .user-list{
-background:url(https://cdn.hipwallpaper.com/i/77/93/s1VJlu.jpg)no-repeat 
+/* background:url(https://cdn.hipwallpaper.com/i/77/93/s1VJlu.jpg)no-repeat 
 center center fixed; 
 -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;
-background-size: cover; 
+background-size: cover;  */
 
-  color:rgb(0, 128, 96);
+  color:rgb(59, 4, 4);
   height: 100px;
   background-color: #333;
   margin-bottom: 15px;
@@ -104,5 +102,23 @@ background-size: cover;
   font: 50px;
 }
 
+.button{
+  font-size: 20px;
+  color: rgb(221, 41, 41) ;
+  font-family: 'Shojumaru', cursive;
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+h3{
+  animation: blinker 1s linear infinite;
+}
+
+.specials{
+  border: 20px;
+}
 
 

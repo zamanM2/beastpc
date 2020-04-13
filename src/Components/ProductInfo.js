@@ -7,7 +7,7 @@ export default class Products extends Component {
     constructor() {
         super();
 
-
+        
      let dataArray;   
      let item1 = {name: "Gamer Essential Esports",
                   imageURL : "https://www.cyberpowerpc.com/images/cs/magnus/cs-450-130_220.png",
@@ -104,7 +104,10 @@ export default class Products extends Component {
 
 
     render() {
-       
+        
+        
+        
+
         return (
             <div className= "info">
                 

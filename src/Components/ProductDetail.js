@@ -20,7 +20,7 @@ export default class ProductDetail extends Component {
                 <br/>
                 {this.props.value.description}
                 <br/><br/>
-                <button onClick={()=>this.toCart()}>Add To Cart</button>
+                <button className = "button" onClick={()=>this.toCart()}>Add To Cart</button>
                 <br/><br/>
                 <a href = "/Store">Back to all items</a>
 
