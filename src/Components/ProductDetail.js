@@ -12,7 +12,7 @@ export default class ProductDetail extends Component {
 
         
         return (
-            <div>
+            <div className ="details">
                 
                 {this.props.value.name}
                 <br/>

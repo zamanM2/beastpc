@@ -32,7 +32,7 @@ export default class Store extends Component {
 
         if(this.props.value.length > 0)
         return (
-            <div>
+            <div className ="store">
                 {/* {this.props.value[0].name}
                 <br/>
                 <button onClick={()=>this.handleClick(this.props.value[0])}>View Item </button> */}
