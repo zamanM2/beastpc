@@ -116,6 +116,14 @@ background-size: cover;
 h3{
   animation: blinker .7s linear infinite;
   background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h1{
+  background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 
