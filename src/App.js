@@ -160,15 +160,6 @@ class App extends Component {
 
   
   <Switch>
-<<<<<<< HEAD
-
-=======
-  <Route path="/Cart">
-      <Cart
-     
-      />
-    </Route>
->>>>>>> upstream/master
     <Route path="/Store">
       <Store value = {this.state.productInfoObj} cartList = {this.cartList}/>
     </Route>

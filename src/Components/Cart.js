@@ -56,12 +56,12 @@ class Cart extends Component {
               <br/>  <br/> 
               {/* Description: {value.description}
               <br/> */}
-              <button onClick={()=>this.handleClick()}>Check Out </button>
-              <br/>  <br/> 
+              
               </div>
         })
       }
-               
+               <button onClick={()=>this.handleClick()}>Check Out </button>
+              <br/>  <br/> 
                <button onClick={()=>this.props.onCartChange()}>Back to all items </button>
             </div>
         )
