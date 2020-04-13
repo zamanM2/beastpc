@@ -25,6 +25,7 @@ class Checkout extends Component {
        let total = item1 + item2 + item3 + item4 + item5 + item6;
 
        return total;
+       
       }
 
      
