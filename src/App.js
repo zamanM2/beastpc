@@ -173,7 +173,9 @@ class App extends Component {
       // console.log(this.state.productData)
        this.state.productData.map(product => {
           return <div > 
-              {product.name} | {product.id} | <button onClick={() => this.deleteClicked(product.id)}>delete</button>
+              {product.name} | {product.id} | <button  className = "button" onClick={() => this.deleteClicked(product.id)}>delete</button>
+              <br></br>
+              <br></br>
                 </div>
            
         })
@@ -210,7 +212,7 @@ class App extends Component {
                     </label>
                     <br/><br/>
 
-                    <input type="Submit" value="Submit" />
+                    <input className = "button" type="Submit" value="Submit" />
                 </form>
                  
         </div>
