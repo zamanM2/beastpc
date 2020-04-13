@@ -3,7 +3,6 @@ import './App.css';
 import Home from './Components/Home';
 import Cart from './Components/Cart';
 import Products from './Components/ProductInfo';
-import Reviews from './Components/Reviews';
 import Store from './Components/Store';
 import UsersList from './Components/UsersList';
 import Checkout from './Components/Checkout'
@@ -140,19 +139,17 @@ class App extends Component {
   render() {
     return (
       <div className = "App">
+
+        
       
 <Router>
 <div className = "nav">
   <nav>
     <ul className= "link">
       
-        <Link to="/">Home</Link>
+        <Link to="/">Home</Link> |
       
-     
-        <Link to="/Products">Products</Link> |
         <Link to="/Store">Store</Link> |
-
-        <Link to="/Reviews">Reviews</Link> |
 
         <Link to="/UsersList"> Admin Users List</Link> |
       
@@ -163,15 +160,17 @@ class App extends Component {
 
   
   <Switch>
+<<<<<<< HEAD
 
+=======
+  <Route path="/Cart">
+      <Cart
+     
+      />
+    </Route>
+>>>>>>> upstream/master
     <Route path="/Store">
       <Store value = {this.state.productInfoObj} cartList = {this.cartList}/>
-    </Route>
-    <Route path="/Products">
-      <Products />
-    </Route>
-    <Route path="/Reviews">
-      <Reviews />
     </Route>
     <Route path="/UsersList">
       <UsersList />

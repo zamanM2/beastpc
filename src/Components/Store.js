@@ -53,7 +53,7 @@ export default class Store extends Component {
 
         if(this.props.value.dataArray.length > 0)
         return (
-            <div>
+            <div className ="store">
                 {/* {this.props.value[0].name}
                 <br/>
                 <button onClick={()=>this.handleClick(this.props.value[0])}>View Item </button> */}
@@ -70,7 +70,7 @@ export default class Store extends Component {
               <br/>  <br/> 
               {/* Description: {value.description}
               <br/> */}
-              <button onClick={()=>this.handleClick(value)}>View Item </button>
+              <button className = "button" onClick={()=>this.handleClick(value)}>View Item </button>
               <br/>  <br/> 
               </div>
         })
