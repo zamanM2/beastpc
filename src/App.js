@@ -18,15 +18,15 @@ import {
 class App extends Component {
 
 
-
   constructor() {
 
     super();
     
     this.productInfoAccess = new Products();
+    this.cartList = [];
     this.state = {
       productData: [],
-    
+      productInfoObj : this.productInfoAccess
     
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -150,8 +150,6 @@ class App extends Component {
         <Link to="/">Home</Link> |
       
         <Link to="/Store">Store</Link> |
-     
-        <Link to="/Cart">Cart</Link> |
 
         <Link to="/UsersList"> Admin Users List</Link> |
       
@@ -162,13 +160,17 @@ class App extends Component {
 
   
   <Switch>
+<<<<<<< HEAD
+
+=======
   <Route path="/Cart">
       <Cart
      
       />
     </Route>
+>>>>>>> upstream/master
     <Route path="/Store">
-      <Store value = {this.state.productData}/>
+      <Store value = {this.state.productInfoObj} cartList = {this.cartList}/>
     </Route>
     <Route path="/UsersList">
       <UsersList />

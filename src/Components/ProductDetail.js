@@ -2,13 +2,41 @@ import React, { Component } from 'react'
 
 
 export default class ProductDetail extends Component {
+   
 
     constructor() {
         super();
-      
+        this.state = {
+            toCartList: false,
+            clickedItem : []
+          }
       }
 
+
+      handleCartChangeP(evt) {
+
+        console.log("lets go product detail");
+        this.props.onCartChange();
+      }
+
+      toCart = () => {
+
+        this.setState({
+            toCartList: true,
+            clickedItem: this.props.value
+        });
+    }
+
     render() {
+
+        if (this.state.toCartList === true) {
+            return(
+            <div>
+            <Cart value = {this.state.clickedItem} cartArray =  {this.props.cartArray} onCartChange = {this.props.onCartChange} />
+            </div>
+            )
+
+          }
 
         
         return (
