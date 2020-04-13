@@ -8,7 +8,8 @@ export default class Products extends Component {
         super();
 
 
-     let dataArray;   
+     let dataArray;
+     let cartArray;   
      let item1 = {name: "Gamer Essential Esports",
                   imageURL : "https://www.cyberpowerpc.com/images/cs/magnus/cs-450-130_220.png",
                   price: 1085, 
@@ -45,6 +46,7 @@ export default class Products extends Component {
                   ,id:"006"};  
 
                   this.dataArray = [];
+                  this.cartArray = [];
                   this.dataArray.push(item1);
                   this.dataArray.push(item2);
                   this.dataArray.push(item3);
@@ -97,8 +99,6 @@ export default class Products extends Component {
         }
 
       }
-
-
 
 
 

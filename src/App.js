@@ -19,15 +19,15 @@ import {
 class App extends Component {
 
 
-
   constructor() {
 
     super();
     
     this.productInfoAccess = new Products();
+    this.cartList = [];
     this.state = {
       productData: [],
-    
+      productInfoObj : this.productInfoAccess
     
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -151,8 +151,6 @@ class App extends Component {
      
         <Link to="/Products">Products</Link> |
         <Link to="/Store">Store</Link> |
-     
-        <Link to="/Cart">Cart</Link> |
 
         <Link to="/Reviews">Reviews</Link> |
 
@@ -165,11 +163,9 @@ class App extends Component {
 
   
   <Switch>
-  <Route path="/Cart">
-      <Cart/>
-    </Route>
+
     <Route path="/Store">
-      <Store value = {this.state.productData}/>
+      <Store value = {this.state.productInfoObj} cartList = {this.cartList}/>
     </Route>
     <Route path="/Products">
       <Products />
