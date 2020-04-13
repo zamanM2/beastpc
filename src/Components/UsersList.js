@@ -32,11 +32,15 @@ export default class UsersList extends Component {
 
  <div  > 
      
- <h2>Beast PC Users</h2>
+ <h2>BeastPC Users</h2>
      {
         this.state.data.map(same => {
-          return <div > 
-              {same.name} | {same.email} </div>
+          return <div className = "json" > 
+              {same.name} | {same.email} 
+              <br/><br/>
+              <br/><br/>
+              </div>
+              
         })
       } </div>
     
