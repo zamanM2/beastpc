@@ -58,7 +58,7 @@ export default class Store extends Component {
                 <br/>
                 <button onClick={()=>this.handleClick(this.props.value[0])}>View Item </button> */}
 
-<h2>Beast PC Products</h2>
+<h2>BeastPC Products</h2>
      {
         this.props.value.dataArray.map(value => {
           return <div > 

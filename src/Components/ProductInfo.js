@@ -68,6 +68,7 @@ export default class Products extends Component {
         ,id:pId};
 
         this.dataArray.push(item1);
+        
       }
 
       updateProductWithID(pId,pName,pPrice,pImageURL,pDescription)
